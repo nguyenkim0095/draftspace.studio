@@ -16,9 +16,9 @@ export default function Services({ t }: ServicesProps) {
       className="px-8 py-24"
     >
       <header className="mb-24">
-        <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tighter">Services</h2>
+        <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tighter">{t.servicesTitle}</h2>
         <p className="mt-8 max-w-2xl text-lg font-medium text-[#666]">
-          From conceptual modeling to technical execution, we provide comprehensive architectural solutions for complex environments.
+          {t.servicesDesc}
         </p>
       </header>
 
@@ -38,7 +38,7 @@ export default function Services({ t }: ServicesProps) {
       </div>
 
       <div className="mt-48">
-        <h3 className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#bbb] mb-12 border-b border-[#e0e0e0] pb-4">Other Services / Project Parallel</h3>
+        <h3 className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#bbb] mb-12 border-b border-[#e0e0e0] pb-4">{t.otherServicesTitle}</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16">
           {t.otherServices.map((service, i) => (
             <div key={i} className="md:pr-12">
@@ -52,14 +52,12 @@ export default function Services({ t }: ServicesProps) {
       </div>
 
       <div className="mt-32 grid grid-cols-1 md:grid-cols-2 gap-16">
-        <div className="p-12 border border-[#e0e0e0] bg-white">
-          <h5 className="text-[11px] font-bold uppercase tracking-widest mb-6">Process 01 / Strategy</h5>
-          <p className="text-sm text-[#666] leading-relaxed">We begin every project with deep site analysis and programmatic optimization to ensure the structural integrity matches the functional requirements.</p>
-        </div>
-        <div className="p-12 border border-[#e0e0e0] bg-white">
-          <h5 className="text-[11px] font-bold uppercase tracking-widest mb-6">Process 02 / Execution</h5>
-          <p className="text-sm text-[#666] leading-relaxed">Our execution phase involves precise documentation and coordination with high-standard engineering teams to deliver uncompromising architecture.</p>
-        </div>
+        {t.processes.map((process, i) => (
+          <div key={i} className="p-12 border border-[#e0e0e0] bg-white">
+            <h5 className="text-[11px] font-bold uppercase tracking-widest mb-6">{process.t}</h5>
+            <p className="text-sm text-[#666] leading-relaxed">{process.d}</p>
+          </div>
+        ))}
       </div>
     </motion.div>
   );

@@ -7,8 +7,12 @@ export interface ProjectData {
   category: string;
   year: string;
   location: string;
-  image: string;
+  images: string[];
   description: string;
+  intent?: string;
+  intent2?: string;
+  team?: { role: string; name?: string }[];
+  drawings?: string[];
 }
 
 export interface Philosophy {
@@ -46,4 +50,21 @@ export interface Translation {
   newProjects: string;
   studioImg: string;
   teamIntroduction: string;
+  servicesTitle: string;
+  servicesDesc: string;
+  otherServicesTitle: string;
+  processes: { t: string; d: string }[];
+  aboutTeamCulture: string;
+  teamRoles: string[];
+  aboutStudioProfile: string;
+  credentials: { t: string; d: string }[];
+  projectNotFound: string;
+  returnHome: string;
+  selectedWork: string;
+  architecturalIntent: string;
+  nextProjectLabel: string;
+  teamLabel: string;
+  locationLabel: string;
+  emailLabel: string;
+  phoneLabel: string;
 }

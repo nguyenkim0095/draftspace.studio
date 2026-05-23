@@ -21,23 +21,30 @@ export function Navbar({ lang, setLang, isMenuOpen, setIsMenuOpen, scrolled, t }
   return (
     <>
       <nav 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-8 py-8 flex justify-between items-center border-b border-[#e0e0e0] ${
+        className={`fixed top-0 left-0 right-0 max-w-[1440px] mx-auto z-50 transition-all duration-300 px-8 py-8 flex justify-between items-center border-b border-[#e0e0e0] ${
           scrolled ? "bg-[#f2f2f2]/95 backdrop-blur-sm py-6" : "bg-[#f2f2f2]"
         }`}
       >
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-lg font-bold tracking-tight uppercase z-10"
+          className="hidden md:block font-bold tracking-tight uppercase z-10"
         >
-          <Link to="/">draftspace.studio</Link>
+          <Link to="/" style={{ fontSize: "16px" }}>draftspace.studio</Link>
         </motion.div>
 
         {/* Central Typographic Logo Icon */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center leading-[0.7] font-black -tracking-[0.12em] text-[15px] md:text-[18px] scale-x-110">
-          <span className="block">DRAFT</span>
-          <span className="block">SPACE</span>
-        </div>
+        <Link 
+          to="/"
+          className="md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center hover:opacity-75 transition-opacity"
+        >
+          <img 
+            src="https://i.postimg.cc/J0ZwQ4TZ/Draftspace-logo-01.png" 
+            alt="Draftspace Logo" 
+            className="h-10 md:h-12 w-auto object-contain"
+            referrerPolicy="no-referrer"
+          />
+        </Link>
 
         <div className="flex items-center gap-10 z-10">
           <div className="hidden md:flex gap-10 text-[11px] uppercase tracking-[0.15em] font-bold">

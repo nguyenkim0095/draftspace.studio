@@ -16,18 +16,20 @@ interface LayoutProps {
 
 export function Layout({ children, lang, setLang, isMenuOpen, setIsMenuOpen, scrolled, t }: LayoutProps) {
   return (
-    <div className="min-h-screen font-sans bg-[#f2f2f2] text-black">
-      <Navbar 
-        lang={lang} 
-        setLang={setLang} 
-        isMenuOpen={isMenuOpen} 
-        setIsMenuOpen={setIsMenuOpen} 
-        scrolled={scrolled} 
-        t={t} 
-      />
-      <main className="pt-24 min-h-[calc(100vh-100px)]">
-        {children}
-      </main>
+    <div className="max-w-[1440px] mx-auto w-full min-h-screen font-sans bg-[#f2f2f2] text-black relative flex flex-col justify-between">
+      <div>
+        <Navbar 
+          lang={lang} 
+          setLang={setLang} 
+          isMenuOpen={isMenuOpen} 
+          setIsMenuOpen={setIsMenuOpen} 
+          scrolled={scrolled} 
+          t={t} 
+        />
+        <main className="pt-24 min-h-[calc(100vh-100px)]">
+          {children}
+        </main>
+      </div>
       <Footer lang={lang} setLang={setLang} />
     </div>
   );

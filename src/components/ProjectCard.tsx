@@ -19,20 +19,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
         className="group cursor-pointer flex flex-col gap-5 text-black"
       >
         <div className="relative aspect-square overflow-hidden border border-[#e0e0e0] bg-[#f2f2f2]">
-          <motion.img
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-            src={project.image}
+          <img
+            src={project.images[0]}
             alt={project.title}
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-x-0 bottom-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/20 to-transparent">
              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white flex items-center gap-2">
                View Project <ArrowRight size={10} />
              </span>
           </div>
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
         </div>
         <div className="flex justify-between items-start">
           <div>
