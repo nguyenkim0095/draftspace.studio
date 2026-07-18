@@ -26,7 +26,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       { t: "Logos & Graphics", d: "Graphic systems developed in parallel with project documentation." }
     ],
     contactInfo: {
-      address: "18/36 Tran Quang Dieu, Nhieu Loc Ward, Ho Chi Minh City",
+      address: "A202 14/12 Ky Dong, Nhieu Loc Ward, Ho Chi Minh City",
       phone: "+84 (0) 906 310 314",
       email: "draftspace.design@gmail.com"
     },
@@ -85,7 +85,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
        { t: "Logo & Đồ họa", d: "Hệ thống đồ họa được phát triển song song với hồ sơ dự án." }
     ],
     contactInfo: {
-      address: "18/36 Trần Quang Diệu, Phường Nhiêu Lộc, Tp Hồ Chí Minh",
+      address: "A202 14/12 Kỳ Đồng, Phường Nhiêu Lộc, TP. Hồ Chí Minh",
       phone: "+84 (0) 906 310 314",
       email: "draftspace.design@gmail.com"
     },
